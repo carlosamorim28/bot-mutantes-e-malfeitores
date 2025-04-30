@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { Client, IntentsBitField, Message, TextChannel } from "discord.js";
-import { client, config, sendMessage } from "./hello";
+import { client, dicordConfig, sendMessage } from "./hello";
 
 export default function handler(
   req: NextApiRequest,

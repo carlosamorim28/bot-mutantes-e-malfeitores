@@ -14,7 +14,7 @@ export default function handler(
   res.status(200).json({ name: "John Doe" });
 }
 
-export const config = {
+export const dicordConfig = {
   token: process.env.DISCORD_TOKEN!, // Substitua pelo seu token do bot
   prefix: "!",
   canalBoasVindas: process.env.CANAL_BOAS_VINDAS!, // Substitua pelo ID do canal desejado
@@ -35,10 +35,10 @@ export async function sendMessage(num1: string, num2: string) {
 
   try {
     // Busca o canal pelo ID
-    client.login(config.token as string).then(async () => {
+    client.login(dicordConfig.token as string).then(async () => {
       console.log("Bot está online");
       const channel = (await client.channels.fetch(
-        config.canalBoasVindas
+        dicordConfig.canalBoasVindas
       )) as TextChannel;
 
       if (channel) {
